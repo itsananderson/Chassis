@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
 
 	# Having access would be nice.
 	if CONF['ip'] == "dhcp"
-		config.vm.network :private_network, type: "dhcp"
+		config.vm.network :public_network
 	else
 		config.vm.network :private_network, ip: CONF['ip']
 	end
